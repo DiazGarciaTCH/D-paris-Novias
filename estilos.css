@@ -1,0 +1,395 @@
+/* ==========================================================================
+   D' PARIS NOVIAS - ESTILOS PRINCIPALES (LUXURY & RESPONSIVE)
+   ========================================================================== */
+
+/* Variables Globales */
+:root {
+    --primary-color: #111111;
+    --gold-accent: #c5a059;
+    --gold-hover: #a38141;
+    --bg-light: #faf8f5;
+    --card-bg: #ffffff;
+    --text-dark: #222222;
+    --text-muted: #666666;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navbar Glassmorphism */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 1.2rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--gold-accent);
+    font-weight: 400;
+}
+
+.nav-insta {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-insta:hover {
+    color: var(--gold-accent);
+}
+
+/* Hero Header */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url('imagenes/photo_4_2026-09-17_18-42-14.jpg') center/cover no-repeat;
+    height: 70vh;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 1.5rem;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero .subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold-accent);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0 auto 2rem auto;
+    max-width: 650px;
+    opacity: 0.92;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--gold-accent);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(197, 160, 89, 0.35);
+}
+
+/* Bloque de Servicios Destacados */
+.services-banner {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 3.5rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.service-item i {
+    font-size: 2.4rem;
+    color: var(--gold-accent);
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Contenedor Principal */
+.container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Título de Sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-title h2 {
+    font-family: var(--font-serif);
+    font-size: 2.6rem;
+    color: var(--primary-color);
+}
+
+.section-title p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-top: 0.3rem;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--gold-accent);
+    margin: 1rem auto 0;
+}
+
+/* Grid del Catálogo */
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Tarjetas (Cards) */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.09);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 390px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.6s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(17, 17, 17, 0.85);
+    color: var(--gold-accent);
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
+.card-content {
+    padding: 1.8rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold-accent);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.card-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.6rem;
+}
+
+.card-content p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* Banner de Instagram al Final */
+.insta-section {
+    margin-top: 5rem;
+}
+
+.insta-box {
+    background: linear-gradient(135deg, #111111 0%, #222222 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+}
+
+.insta-icon {
+    font-size: 3rem;
+    color: var(--gold-accent);
+    margin-bottom: 1rem;
+}
+
+.insta-box h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.insta-box p {
+    font-size: 0.95rem;
+    color: #cccccc;
+    margin-bottom: 1.8rem;
+    font-weight: 300;
+}
+
+.btn-insta-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-accent);
+    color: #ffffff;
+    padding: 0.85rem 2.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-insta-banner:hover {
+    background: var(--gold-hover);
+    transform: scale(1.03);
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-top: 5rem;
+}
+
+.logo-footer {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+}
+
+.footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.copyright {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    color: #aaaaaa;
+}
+
+/* Adaptación para Celulares y Tablets */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    
+    .card-image {
+        height: 340px;
+    }
+    
+    .services-banner {
+        padding: 2.5rem 0;
+    }
+}
